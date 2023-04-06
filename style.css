@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@keyframes show-nice {
+    
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(-321px, -250px);
+        opacity: 0;
+    }
+}
+
+@keyframes show-wrong {
+    
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(321px, -250px);
+        opacity: 0;
+    }
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, rgba(255,36,195,1) 0%, rgba(163,22,194,1) 100%);
+}
+
+*{
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    border: 5px solid black;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5rem;
+    font-size: 2em;
+    background-color: #ededed;
+    position: relative;
+    max-width: 600px;
+}
+
+.form{
+    display: flex;
+}
+
+.submit{
+    width: 15px;
+}
+
+.rules{
+    text-align: center;
+}
+
+.random-word{
+    bottom: 50px;
+    position: absolute;
+    letter-spacing: 3px;
+}
+
+.output{
+    display: none;
+    top: 250px;
+    position: absolute;
+    letter-spacing: 3px;
+}
+
+.good-luck{
+    text-decoration: underline;
+}
+
+.points-container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: .2em;
+}
+
+.timer-container{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .2em;
+}
+
+.message-to-user{
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: underline;
+    font-size: 1.3em;
+    bottom: 10px;
+    width: 200px;
+    word-wrap: break-word;
+    text-align: center;
+    margin: .2em;
+}
+
+.input{
+    border: none;
+    padding: .4em;
+    font-size: 1.1em;
+    background-color: #d9d9d9;
+    border-radius: 0.2em;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.input:focus{
+    border: 1px solid black;
+    scale: 1.1;
+}
+
+.dog{
+    width: 300px;
+    border-radius: 0.5em;
+}
+
+.start-again{
+    background-color: #ededed;
+    font-size: 1.5em;
+    border: 0;
+    border: 2px solid black;
+    padding: 0.1em;
+    border-radius: 0.2em;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.ranking-btn{
+    position: absolute;
+    text-transform: uppercase;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1em;
+    top: 0;
+    left: 0;
+    margin: .7em;
+    border: 2px solid black;
+    padding: .2em;
+    background-color: #d9d9d9;
+}
+
+.ranking-btn:hover{
+    scale: 1.1;
+}
+
+.ranking-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.submit{
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 0.6em;
+    text-decoration: underline;
+}
+
+.new-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    border: 2px solid black;
+    padding: .3em
+}
+
+.ranking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: #ededed;
+    padding: 1em;
+    border: 5px solid black;
+    border-radius: 0.5em;
+}
+
+.name{
+    padding: .2em;
+    font-size: 0.7em;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 0.2em;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.huge{
+    font-size: 2em;
+}
+
+.hidden{
+    display: none;
+}
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
+
+.animation-good{
+    position: absolute;
+    bottom: 0;
+    animation: show-nice 1s ease;
+}
+
+.animation-bad{
+    position: absolute;
+    bottom: 0;
+    animation: show-wrong 1s ease;
+}
+
+@media (max-width: 450px){
+    .hero{
+        font-size: 1.5em
+    }
+}

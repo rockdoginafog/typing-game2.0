@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Game</title>
+</head>
+<body>
+
+    <main class="hero">
+
+        <p class="rules">In 30 seconds you need to type how many words you can in the input. Timer starts as soon as you type first letter. <p class="good-luck">Good luck!</p></p>
+
+        <p class="timer-container">Timer: <span id="timer">0</span>s</p>
+
+        <p class="points-container">Points: <span class="points">0</span></p>
+
+        <form class="form">
+            <input type="text" class="input" autofocus autocapitalize="off" autocorrect="off">
+        </form>
+
+        <div class="random-word"></div>
+
+        <p class="output"></p>
+
+        <p class="output-hidden hidden"></p>
+
+        <p class="animation-good nice green hidden">Nice!</p>
+
+        <p class="animation-bad wrong red hidden">Wrong!</p>
+
+        <div class="span-container"></div>
+
+        <p class="message-to-user"></p>
+
+        <img class="dog hidden" src="">
+
+        <button class="start-again hidden">start again...</button>
+
+        <div class="ranking-container hidden">
+            <p class="name-p">tell me your name...</p>
+            <form class="ranking-submit">
+                <input type="text" class="name" autocapitalize="off" autocorrect="off">
+                <button class="submit">submit</button>
+            </form>
+        </div>
+
+    </main>
+
+    <button class="ranking-btn">ranking</button>
+
+    <div class="ranking hidden">
+        <p class="huge">RANKING</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
